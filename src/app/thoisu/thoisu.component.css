@@ -1,0 +1,37 @@
+.top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+h1{
+    text-align: center;
+    background: red;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    padding: 10px;
+}
+.content{
+    color:grey;
+}
+h4{
+    color:black;
+    font-weight: 500;
+}
+.cn{
+    text-align: center;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    padding: 10px;
+    background:purple;
+}
+#dl{
+    background:orange;
+}
+#DD{
+    background:orangered;
+}

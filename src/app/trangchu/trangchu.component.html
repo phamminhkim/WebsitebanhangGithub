@@ -1,0 +1,610 @@
+
+    <title>LinhKienPC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <div id="fb-root"></div>
+    
+
+    <!-- header -->
+    
+
+    <!-- form dang ky khi click vao button tren header-->
+    <div class="modal fade mt-5" id="formdangky" data-backdrop="static" tabindex="-1" aria-labelledby="dangky_tieude"
+        aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="tabs d-flex justify-content-around list-unstyled mb-0">
+                        <li class="tab tab-dangnhap text-center">
+                            <a class=" text-decoration-none">Đăng nhập</a>
+                            <hr>
+                        </li>
+                        <li class="tab tab-dangky text-center">
+                            <a class="text-decoration-none">Đăng ký</a>
+                            <hr>
+                        </li>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-signup" class="form-signin mt-2">
+                        <div class="form-label-group">
+                            <input type="text" class="form-control" placeholder="Nhập họ và tên" name="name" required
+                                autofocus>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="text" class="form-control" placeholder="Nhập số điện thoại" name="phone"
+                                required>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email"
+                                required>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="password" class="form-control" placeholder="Nhập mật khẩu" name="password"
+                                required>
+                        </div>
+                        <div class="form-label-group mb-4">
+                            <input type="password" class="form-control" name="confirm_password"
+                                placeholder="Nhập lại mật khẩu" required>
+                        </div>
+                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white mt-3" type="submit"
+                            style="background: #F5A623">Đăng ký</button>
+                        <hr class="mt-3 mb-2">
+                        <div class="custom-control custom-checkbox">
+                            <a href="#" class="text-decoration-none text-center" style="color: #F5A623">Điều khoản dịch
+                                vụ & Chính sách bảo mật</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- form dang nhap khi click vao button tren header-->
+    <div class="modal fade mt-5" id="formdangnhap" data-backdrop="static" tabindex="-1"
+        aria-labelledby="dangnhap_tieude" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <ul class="tabs d-flex justify-content-around list-unstyled mb-0">
+                        <li class="tab tab-dangnhap text-center">
+                            <a class=" text-decoration-none">Đăng nhập</a>
+                            <hr>
+                        </li>
+                        <li class="tab tab-dangky text-center">
+                            <a class="text-decoration-none">Đăng ký</a>
+                            <hr>
+                        </li>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-signin" class="form-signin mt-2">
+                        <div class="form-label-group">
+                            <input type="email" class="form-control" placeholder="Nhập địa chỉ email" name="email"
+                                required autofocus>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required>
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
+                            <a href="#" class="float-right text-decoration-none" style="color: #F5A623">Quên mật
+                                khẩu</a>
+                        </div>
+
+                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white" type="submit"
+                            style="background: #F5A623">Đăng nhập</button>
+                        <hr class="my-4">
+                        <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                                class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
+                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                                class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- thanh tieu de "danh muc sach" + hotline + ho tro truc tuyen -->
+    
+
+    <!-- khoi sach moi  -->
+    <section class="_1khoi sachmoi bg-white">
+        <div class="container">
+            <div class="noidung" style=" width: 100%;">
+                <div class="row">
+                    <!--header-->
+                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
+                        <h1 class="header text-uppercase" style="font-weight: 600; color:#CF111A; font-style:bold;">LINH KIỆN MÁY TÍNH</h1>
+                        <a href="" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class="khoisanpham" style="padding-bottom: 2rem;">
+                    <!-- 1 san pham -->
+                    <div class="card">
+                        <a  class="motsanpham" href="product.component.html"
+                            style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
+                            title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                          <img class="card-img-top anh" src="./assets/CARD.jpg"
+                                alt="lap-ke-hoach-kinh-doanh-hieu-qua" style="margin-top:50px;">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Card Màn Hình ZOTAC RTX 2060</h3>
+                                <small class="tacgia text-muted">ZOTAC</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi">8.111.200 ₫</div>
+                                    <div class="giacu text-muted">8.000.000 ₫</div>
+                                    <div class="sale">-0,2%</div>
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="Ma-bun-luu-manh-va-nhung-cau-chuyen-khac-cua-nguyen-tri.html" class="motsanpham"
+                            style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
+                            title="Ma Bùn Lưu Manh Và Những Câu Chuyện Khác Của Nguyễn
+                        Trí">
+                            <img class="card-img-top anh" src="./assets/GIGABYTE.jpg" alt="ma-bun-luu-manh">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">CARD MÀN HÌNH GIGABYTE GTX 1650 OC-4G</h3>
+                                <small class="tacgia text-muted">GIGABYTE</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi">6.668.000 ₫</div>
+                                    <div class="giacu text-muted">6.668.000 ₫</div>
+                                    <div class="sale">-0%</div>
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom"
+                            title="Bank 4.0 - Giao dịch mọi nơi, không chỉ là ngân hàng">
+                            <img class="card-img-top anh" src="./assets/GIGABYTE.jpg" alt="bank-4.0">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">CARD MÀN HÌNH GIGABYTE RTX 2080 SUPER GAMING OC-8G
+                                </h3>
+                                <small class="tacgia text-muted">GIGABYTE</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi">22.111.200 ₫</div>
+                                    <div class="giacu text-muted">22.111.200 ₫</div>
+                                    <div class="sale">0%</div>
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom" title="Bộ Sách 500 Câu Chuyện Đạo Đức - Những Câu Chuyện
+                        Tình Thân (Bộ 8 Cuốn)">
+                            <img class="card-img-top anh" src="./assets/GIGABYTE.jpg"
+                                alt="bo-sach-500-cau-chuyen-dao-duc">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">CARD MÀN HÌNH GIGABYTE GTX</h3>
+                                <small class="tacgia text-muted">GIGABYTE</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi">13.111.200 ₫</div>
+                                    <div class="giacu text-muted">13.111.200 ₫</div>
+                                    <div class="sale">0%</div>
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- khoi sach combo hot  -->
+    <section class="_1khoi combohot mt-4">
+        <div class="container">
+            <div class="noidung bg-white" style=" width: 100%;">
+                <div class="row">
+                    <!--header -->
+                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
+                        <h2 class="header text-uppercase" style="font-weight: 600; color:#CF111A; font-style:bold;margin-top: 17px;">BÀN PHÍM</h2>
+                        <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class="khoisanpham">
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom" title="Chuyện Nghề Và Chuyện Đời - Bộ 4 Cuốn">
+                            <img class="card-img-top anh" src="./assets/phim1.png"
+                                alt="combo-chuyen-nghe-chuyen-doi">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Bàn Phím Corsair - K68 BLK RGB Mx Red</h3>
+                                <small class="tacgia text-muted">Corsair</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi">3.100.000 ₫</div>
+                                    <div class="giacu text-muted">3.000.000 ₫</div>
+                                    <div class="sale">-0,1%</div>
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom"
+                            title="Combo Mẹ Con Sư Tử - Bồ Tát Ngàn Tay Ngàn Mắt">
+                            <img class="card-img-top anh" src="./assets/phim2.png"
+                                alt="combo-me-con-su-tu-bo-tat-ngan-tay-ngan-mat">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Bàn Phím Corsair - K68 BLK RGB Mx Red</h3>
+                                <small class="tacgia text-muted">Corsair</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi">2.111.200 ₫</div>
+                                    <div class="giacu text-muted">2.000.000 ₫</div>
+                                    <div class="sale">-0,1%</div>
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom" title="Combo Osho: Hạnh Phúc Tại Tâm, Can Đảm Biến Thách Thức Thành
+                            Sức Mạnh & Sáng Tạo Bừng Cháy Sức Mạnh Bên Trong">
+                            <img class="card-img-top anh" src="./assets/phim3.jpg"
+                                alt="combo-hanh-phuc-sang-tao" style="margin-bottom:88px;">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Bàn Phím Corsair - K68 RGB Mini BLK-MX SPEED
+                                </h3>
+                                <small class="tacgia text-muted">Corsair</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi">2.611.200 ₫</div>
+                                    <div class="giacu text-muted">2.139.000 ₫</div>
+                                    <div class="sale">-0,2%</div>
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom"
+                            title="Combo Giáo Dục Và Ý Nghĩa Cuộc Sống Và Bạn Đang Nghịch Gì Với Đời Mình?">
+                            <img class="card-img-top anh" src="./assets/phim4.png"
+                                alt="combo-giao-duc-va-y-nghia-cuoc-song">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Bàn Phím Corsair - K68 RGB Mini BLK-MX SPEED</h3>
+                                <small class="tacgia text-muted"> Corsair</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi">2.611.200 ₫</div>
+                                    <div class="giacu text-muted">2.139.000 ₫</div>
+                                    <div class="sale">-0,2%</div>
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                  
+                   
+                   
+          
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- khoi sach sap phathanh  -->
+    <section class="_1khoi sapphathanh mt-4">
+        <div class="container">
+            <div class="noidung bg-white" style=" width: 100%;">
+                <div class="row">
+                    <!--header-->
+                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
+                        <h2 class="header text-uppercase" style="font-weight: 600; color:#CF111A; font-style:bold;margin-top: 17px">CHUỘT GAMING</h2>
+                        <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class="khoisanpham">
+                    <!-- 1 san pham -->
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom" title="Ngoại Giao Của Chính Quyền Sài Gòn">
+                            <img class="card-img-top anh" src="./assets/chuot.png"
+                                alt="ngoai-giao-cua-chinh-quyen-sai-gon">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Chuột không dây Corsair DARK CORE  RGB PRO SE</h3>
+                                <small class="tacgia text-muted">Corsair</small>
+                                <div class="gia d-flex align-items-baseline">
+                                  <div class="giamoi">2.611.200 ₫</div>
+                                  <div class="giacu text-muted">2.139.000 ₫</div>
+                                  <div class="sale">-0,2%</div>
+                              </div>
+                                
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom" title="Đường Mây Trên Đất Hoa">
+                            <img class="card-img-top anh" src="./assets/chuot2.png"
+                                alt="duong-may-tren-dat-hoa">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Chuột Corsair Scimitar RGB ELITE</h3>
+                                <small class="tacgia text-muted">Corsair</small>
+                                <div class="gia d-flex align-items-baseline">
+                                  <div class="giamoi">1.611.200 ₫</div>
+                                  <div class="giacu text-muted">1.139.000 ₫</div>
+                                  <div class="sale">-0,2%</div>
+                              </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom" title="Muôn Kiếp Nhân Sinh">
+                            <img class="card-img-top anh" src="./assets/chuot3.jpg"
+                                alt="muon-kiep-nhan-sinh">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Chuột Corsair M65 RGB ELITE WHITE</h3>
+                                <small class="tacgia text-muted">Corsair</small>
+                                <div class="gia d-flex align-items-baseline">
+                                  <div class="giamoi">1.311.200 ₫</div>
+                                  <div class="giacu text-muted">1.139.000 ₫</div>
+                                  <div class="sale">-0,2%</div>
+                              </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom" title="Đường Mây Trong Cõi Mộng">
+                            <img class="card-img-top anh" src="./assets/chuot4.jpg"
+                                alt="duong-may-trong-coi-mong.jpg">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten">Chuột Corsair M65 RGB ELITE</h3>
+                                <small class="tacgia text-muted">Corsair</small>
+
+                                <div class="gia d-flex align-items-baseline">
+                                  <div class="giamoi">1.311.200 ₫</div>
+                                  <div class="giacu text-muted">1.139.000 ₫</div>
+                                  <div class="sale">-0,2%</div>
+                              </div>                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- div _1khoi -- khoi sachnendoc -->
+    <section class="_1khoi sachnendoc bg-white mt-4">
+        <div class="container">
+            <div class="noidung" style=" width: 100%;">
+                <div class="row">
+                    <!--header-->
+                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
+                        <h2 class="header text-uppercase" style="font-weight: 600; color:#CF111A; font-style:bold;">PHỤ KIỆN NÊN MUA</h2>
+                        <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    </div>
+                    <!-- 1 san pham -->
+                    <div class="col-lg col-sm-4">
+                        <div class="card">
+                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Từng bước chân nở hoa: Khi câu kinh bước tới">
+                                <img class="card-img-top anh" src="./assets/phim4.png"
+                                    alt="tung-buoc-chan-no-hoa">
+                                <div class="card-body noidungsp mt-3">
+                                    <h3 class="card-title ten">Bàn Phím</h3>
+                                    <small class="thoigian text-muted">03/04/2020</small>
+                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm-4">
+                        <div class="card">
+                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                                data-toggle="tooltip" data-placement="bottom" title="Cảm ơn vì đã được thương">
+                                <img class="card-img-top anh" src="./assets/chuot3.jpg"
+                                    alt="cam-on-vi-da-duoc-thuong">
+                                <div class="card-body noidungsp mt-3">
+                                    <h3 class="card-title ten">Chuột Gaming</h3>
+                                    <small class="thoigian text-muted">31/03/2020</small>
+                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm-4">
+                        <div class="card">
+                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Hào quang của vua Gia Long trong mắt Michel Gaultier">
+                                <img class="card-img-top anh" src="./assets/lot.jpg" alt="vua-gia-long">
+                                <div class="card-body noidungsp mt-3">
+                                    <h3 class="card-title ten">Lót Chuột</h3>
+                                    <small class="thoigian text-muted">21/03/2020</small>
+                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm-4">
+                        <div class="card">
+                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Suối nguồn” và cái tôi hiện sinh trong từng cá thể">
+                                <img class="card-img-top anh" src="./assets/tainghe.jpg"
+                                    alt="suoi-nguon-va-cai-toi-trong-tung-ca-the">
+                                <div class="card-body noidungsp mt-3">
+                                    <h3 class="card-title ten">Tai Nghe</h3>
+                                    <small class="thoigian text-muted">16/03/2020</small>
+                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm-4">
+                        <div class="card cuoicung">
+                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Đại dịch trên những con đường tơ lụa">
+                                <img class="card-img-top anh" src="./assets/GIGABYTE.jpg"
+                                    alt="dai-dich-tren-con-duong-to-lua">
+                                <div class="card-body noidungsp mt-3">
+                                    <h3 class="card-title ten">Card Màn</h3>
+                                    <small class="thoigian text-muted">16/03/2020</small>
+                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <!-- thanh cac dich vu :mien phi giao hang, qua tang mien phi ........ -->
+   
+
+    <!-- footer  -->
+    
+    <!-- nut cuon len dau trang -->
+    <div class="fixed-bottom">
+        <div class="btn btn-warning float-right rounded-circle nutcuonlen" id="backtotop" href="#"
+            style="background:#CF111A;"><i class="fa fa-chevron-up text-white"></i></div>
+    </div>
